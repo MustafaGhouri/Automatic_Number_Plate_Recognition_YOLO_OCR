@@ -40,8 +40,12 @@ if __name__ == "__main__":
             )  # text_read.recognize() , you can use cropped plate image or whole image
             # Filtering the text from the image.
             text = filter_text(params.rect_size, resulteasyocr, params.region_threshold)
-            # Saving the results of the OCR in a csv file.
-            save_results(text[-1], "ocr_results.csv", "Detection_Images")
+            if text:
+                # Saving the results of the OCR in a CSV file.
+                save_results(text[-1], "ocr_results.csv", "Detection_Images")
+            else:
+                print("No text detected in the image.")
+            
             print(text)
             cv2.imshow("detected", detected)
 
