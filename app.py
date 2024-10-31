@@ -5,7 +5,7 @@ from PIL import Image
 import cv2
 import numpy as np
 from torchvision.models import detection
-
+from ultralytics import YOLO
 import torch
 from torchvision import models
 from flask import Flask, render_template, request, redirect, Response
@@ -14,8 +14,9 @@ app = Flask(__name__)
 
 
 model = torch.hub.load(
-    "ultralytics/yolov5", "custom", path="model/last.pt", force_reload=True
+    "ultralytics/yolo", "custom", path="model/last.pt", force_reload=True
 )
+# model = YOLO("model/last.pt")
 
 model.eval()
 model.conf = 0.5

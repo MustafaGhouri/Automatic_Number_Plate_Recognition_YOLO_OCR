@@ -30,4 +30,5 @@ class Parameters:
         self.vis_shape = (800, 600)
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-        self.model = "/home/mef/Documents/plate_detection_project/best.pt"
+        # self.model = "/home/mef/Documents/plate_detection_project/best.pt"
+        self.model = r"D:\python\Automatic_Number_Plate_Recognition_YOLO_OCR\model\best.pt"

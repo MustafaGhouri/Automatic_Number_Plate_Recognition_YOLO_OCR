@@ -1,4 +1,4 @@
-tensorflow==2.14.1
+tensorflow==2.6.0
 matplotlib==3.5.1
 torch==1.13.1
 pandas==1.2.4
@@ -24,4 +24,3 @@ pafy==0.5.5
 Pillow==9.3.0
 PyYAML==6.0
 tensorrt==0.0.1.dev5
-
